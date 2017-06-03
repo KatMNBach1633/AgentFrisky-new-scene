@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Agent Frisky</title>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <script type="text/javascript" src="js/startmenu.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascrpit" src="js/credits.js"></script> 
+</head>
+
+  <body>
+<script type="text/javascript">
+var game = new Phaser.Game(1000, 720, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+window.onload = function () {
+
+    game.state.add('startmenu', startmenu);
+    game.state.add('app', app);
+    game.state.start('startmenu');
+}
+
+</script>
+  </body>
+
+</html>
